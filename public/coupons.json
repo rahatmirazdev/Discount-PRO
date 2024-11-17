@@ -1,0 +1,262 @@
+[
+    {
+        "_id": "1a2b3c4d5e6f",
+        "brand_name": "Amazon",
+        "rating": 4.8,
+        "description": "Shop millions of items at the world's largest online store.",
+        "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+        "coupons": [
+            {
+                "coupon_code": "SAVE10",
+                "description": "Save 10% on select electronics",
+                "expiry_date": "2024-12-31",
+                "condition": "Minimum purchase of $50",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "FREESHIP",
+                "description": "Free shipping on orders over $25",
+                "expiry_date": "2025-01-15",
+                "condition": "Only on eligible items",
+                "coupon_type": "Flat"
+            }
+        ],
+        "shop_link": "https://www.amazon.com",
+        "category": "E-commerce",
+        "isSaleOn": true
+    },
+    {
+        "_id": "7g8h9i0j1k2l",
+        "brand_name": "Nike",
+        "rating": 4.7,
+        "description": "High-quality athletic wear and footwear for sports enthusiasts.",
+        "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg",
+        "coupons": [
+            {
+                "coupon_code": "RUN20",
+                "description": "20% off running shoes",
+                "expiry_date": "2024-11-30",
+                "condition": "Applies to selected styles only",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "NEWYEAR30",
+                "description": "Flat $30 off on orders over $150",
+                "expiry_date": "2025-01-05",
+                "condition": "Valid on full-priced items only",
+                "coupon_type": "Flat"
+            }
+        ],
+        "shop_link": "https://www.nike.com",
+        "category": "Sportswear",
+        "isSaleOn": false
+    },
+    {
+        "_id": "3m4n5o6p7q8r",
+        "brand_name": "Walmart",
+        "rating": 4.6,
+        "description": "Affordable products for daily needs and more.",
+        "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_logo.svg",
+        "coupons": [
+            {
+                "coupon_code": "SAVE5",
+                "description": "Save $5 on grocery orders over $50",
+                "expiry_date": "2024-12-20",
+                "condition": "Pickup or delivery only",
+                "coupon_type": "Flat"
+            },
+            {
+                "coupon_code": "FRESH10",
+                "description": "10% off fresh produce",
+                "expiry_date": "2024-11-30",
+                "condition": "Excludes organic products",
+                "coupon_type": "Percentage"
+            }
+        ],
+        "shop_link": "https://www.walmart.com",
+        "category": "Retail",
+        "isSaleOn": true
+    },
+    {
+        "_id": "9s0t1u2v3w4x",
+        "brand_name": "Best Buy",
+        "rating": 4.8,
+        "description": "Your go-to place for the latest tech and electronics.",
+        "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Best_Buy_Logo.svg/800px-Best_Buy_Logo.svg.png",
+        "coupons": [
+            {
+                "coupon_code": "TECH15",
+                "description": "15% off select laptops",
+                "expiry_date": "2025-02-15",
+                "condition": "Only on regularly priced items",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "ACCESS20",
+                "description": "20% off on tech accessories",
+                "expiry_date": "2024-12-31",
+                "condition": "Excludes clearance items",
+                "coupon_type": "Percentage"
+            }
+        ],
+        "shop_link": "https://www.bestbuy.com",
+        "category": "Electronics",
+        "isSaleOn": true
+    },
+    {
+        "_id": "5y6z7a8b9c0d",
+        "brand_name": "Starbucks",
+        "rating": 4.5,
+        "description": "Enjoy a wide variety of coffee, tea, and snacks.",
+        "brand_logo": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1024px-Starbucks_Corporation_Logo_2011.svg.png",
+        "coupons": [
+            {
+                "coupon_code": "COFFEE10",
+                "description": "10% off on your favorite drinks",
+                "expiry_date": "2024-12-31",
+                "condition": "Only at participating stores",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "FREESHOT",
+                "description": "Free extra espresso shot with any purchase",
+                "expiry_date": "2025-01-15",
+                "condition": "Limit 1 per customer",
+                "coupon_type": "Freebie"
+            }
+        ],
+        "shop_link": "https://www.starbucks.com",
+        "category": "Food & Beverages",
+        "isSaleOn": false
+    },
+    {
+        "_id": "6e7f8g9h0i1j",
+        "brand_name": "IKEA",
+        "rating": 4.7,
+        "description": "Stylish and affordable furniture for every home.",
+        "brand_logo": "https://www.ikea.com/global/assets/logos/brand/ikea.svg",
+        "coupons": [
+            {
+                "coupon_code": "FURN15",
+                "description": "15% off on living room furniture",
+                "expiry_date": "2024-12-31",
+                "condition": "Minimum purchase of $100",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "KITCHEN30",
+                "description": "$30 off on kitchen appliances over $200",
+                "expiry_date": "2025-01-15",
+                "condition": "Only on selected items",
+                "coupon_type": "Flat"
+            }
+        ],
+        "shop_link": "https://www.ikea.com",
+        "category": "Furniture",
+        "isSaleOn": true
+    },
+    {
+        "_id": "7k8l9m0n1o2p",
+        "brand_name": "Adidas",
+        "rating": 4.6,
+        "description": "Performance and lifestyle wear for all athletes.",
+        "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/2/24/Adidas_logo.png",
+        "coupons": [
+            {
+                "coupon_code": "SPORT20",
+                "description": "20% off on sports apparel",
+                "expiry_date": "2024-11-30",
+                "condition": "Applicable on selected items",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "SHOES50",
+                "description": "Flat $50 off on shoes over $200",
+                "expiry_date": "2025-01-05",
+                "condition": "Limited to one per customer",
+                "coupon_type": "Flat"
+            }
+        ],
+        "shop_link": "https://www.adidas.com",
+        "category": "Sportswear",
+        "isSaleOn": true
+    },
+    {
+        "_id": "8q9r0s1t2u3v",
+        "brand_name": "Apple",
+        "rating": 4.9,
+        "description": "Innovative technology and cutting-edge design.",
+        "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+        "coupons": [
+            {
+                "coupon_code": "IPHONE100",
+                "description": "$100 off on iPhone 15",
+                "expiry_date": "2024-12-31",
+                "condition": "Valid on unlocked devices only",
+                "coupon_type": "Flat"
+            },
+            {
+                "coupon_code": "MAC20",
+                "description": "20% off on MacBook accessories",
+                "expiry_date": "2025-01-15",
+                "condition": "No minimum purchase",
+                "coupon_type": "Percentage"
+            }
+        ],
+        "shop_link": "https://www.apple.com",
+        "category": "Electronics",
+        "isSaleOn": false
+    },
+    {
+        "_id": "9w0x1y2z3a4b",
+        "brand_name": "H&M",
+        "rating": 4.5,
+        "description": "Affordable fashion for men, women, and kids.",
+        "brand_logo": "https://i.ibb.co.com/59JQfWc/hm-logo-png-seeklogo-64496-removebg-preview.png",
+        "coupons": [
+            {
+                "coupon_code": "WINTER20",
+                "description": "20% off winter collection",
+                "expiry_date": "2024-12-31",
+                "condition": "Excludes clearance items",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "SALE50",
+                "description": "Flat 50% off on select items",
+                "expiry_date": "2025-01-20",
+                "condition": "Available in stores only",
+                "coupon_type": "Flat"
+            }
+        ],
+        "shop_link": "https://www.hm.com",
+        "category": "Clothing",
+        "isSaleOn": true
+    },
+    {
+        "_id": "0c1d2e3f4g5h",
+        "brand_name": "Uber Eats",
+        "rating": 4.4,
+        "description": "Delicious food from your favorite local restaurants.",
+        "brand_logo": "https://i.ibb.co.com/gVvBQ9C/pngwing-com-removebg-preview.png",
+        "coupons": [
+            {
+                "coupon_code": "FREEDELIVERY",
+                "description": "Free delivery on orders over $20",
+                "expiry_date": "2024-11-30",
+                "condition": "New users only",
+                "coupon_type": "Flat"
+            },
+            {
+                "coupon_code": "MEAL15",
+                "description": "15% off on meal combos",
+                "expiry_date": "2025-01-10",
+                "condition": "Maximum discount of $10",
+                "coupon_type": "Percentage"
+            }
+        ],
+        "shop_link": "https://www.ubereats.com",
+        "category": "Food Delivery",
+        "isSaleOn": false
+    }
+]
