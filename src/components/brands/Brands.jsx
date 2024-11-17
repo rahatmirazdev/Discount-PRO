@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaStar } from "react-icons/fa";
+import bg from "../../assets/stacked-waves-haikei.svg";
 
 const Brands = () => {
   const [brands, setBrands] = useState([]);
@@ -43,7 +44,15 @@ const Brands = () => {
       />
       <div className="grid grid-cols-1 gap-8">
         {filteredBrands.map((brand) => (
-          <div key={brand._id} className="bg-[#e6e6e6] shadow-sm rounded-tr-3xl rounded-bl-3xl p-8">
+          <div
+            key={brand._id}
+            className="bg-[#e6e6e6] shadow-sm rounded-tr-3xl rounded-bl-3xl p-8"
+            style={{
+              backgroundImage: `url(${bg})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
             <div className="mb-4">
               <img src={brand.brand_logo} alt={brand.brand_name} className="h-16 w-auto m-4 ml-0" />
               <div>

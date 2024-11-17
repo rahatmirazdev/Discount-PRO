@@ -1,37 +1,77 @@
 import { useContext, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import { validatePassword } from "../utils/validation";
 
 const Register = () => {
-  const [error, setError] = useState("");
   const { register, signInWithGoogle } = useContext(AuthContext);
   const navigate = useNavigate();
+  const [passwordError, setPasswordError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const name = e.target.name.value;
+    const photoURL = e.target.photoURL.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+
+    const passwordValidationError = validatePassword(password);
+    if (passwordValidationError) {
+      setPasswordError(passwordValidationError);
+      toast.error(passwordValidationError);
+      return;
+    }
 
     register(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
-        setError("");
-        navigate("/");
+        user.updateProfile({
+          displayName: name,
+          photoURL: photoURL,
+        }).then(() => {
+          console.log(user);
+          toast.success("Registration successful!");
+          navigate("/");
+        });
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        setError(errorMessage);
+        console.log(errorMessage);
+        toast.error(errorMessage);
       });
   };
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-[#778DA9]">
-      <div className="mx-2 max-w-[500px] max-h-[600px] bg-[#1B263B] text-white card-body rounded-md">
+      <div className="mx-2 max-w-[500px] max-h-[690px] bg-[#1B263B] text-white card-body rounded-md">
         <h2 className="text-2xl font-bold mb-4 text-white">Create a new account</h2>
         <form onSubmit={handleSubmit}>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Name</span>
+            </label>
+            <input
+              name="name"
+              type="text"
+              placeholder="Name"
+              className="input text-black"
+              required
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Photo URL</span>
+            </label>
+            <input
+              name="photoURL"
+              type="text"
+              placeholder="Photo URL"
+              className="input text-black"
+              required
+            />
+          </div>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
@@ -39,8 +79,8 @@ const Register = () => {
             <input
               name="email"
               type="email"
-              placeholder="email"
-              className="input input-bordered"
+              placeholder="Email"
+              className="input text-black"
               required
             />
           </div>
@@ -51,23 +91,22 @@ const Register = () => {
             <input
               name="password"
               type="password"
-              placeholder="password"
-              className="input input-bordered"
+              placeholder="Password"
+              className="input text-black"
               required
             />
+            {passwordError && <p className="text-red-500">{passwordError}</p>}
           </div>
-          {error && <p className="text-red-500">{error}</p>}
-          <div className="form-control mt-14">
+          <div className="form-control mt-6">
             <button className="btn btn-primary" type="submit">Register</button>
           </div>
         </form>
         <button className="btn btn-secondary mt-4" onClick={() => signInWithGoogle().then(() => navigate("/"))}>Register with Google</button>
-      <div className="mt-4">
-          <NavLink to="/login" className="link link-hover">
-            Already have an account? Login
-          </NavLink>
+        <div className="mt-4">
+          <NavLink to="/login" className="link link-hover">Already have an account? Login</NavLink>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

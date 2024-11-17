@@ -13,7 +13,7 @@ const BrandsOnSell = () => {
   }, []);
 
   return (
-    <div className="my-24 max-w-[1440px] mx-auto px-2 my-24">
+    <div className="my-24 max-w-[1440px] mx-auto px-2">
       <h2 className="text-3xl font-bold text-gray-800 mt-8 mb-8">Brands on Sale</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {brandsOnSale.map((brand) => (

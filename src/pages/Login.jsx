@@ -51,7 +51,9 @@ const Login = () => {
   return (
     <div className="min-h-screen flex justify-center items-center bg-[#778DA9]">
       <div className="mx-2 max-w-[500px] max-h-[600px] bg-[#1B263B] text-white card-body rounded-md">
-        <h2 className="text-2xl font-bold mb-4 text-white">Sign in to your account</h2>
+        <h2 className="text-2xl font-bold mb-4 text-white">
+          Sign in to your account
+        </h2>
         <form onSubmit={handleSubmit}>
           <div className="form-control">
             <label className="label">
@@ -60,8 +62,8 @@ const Login = () => {
             <input
               name="email"
               type="email"
-              placeholder="email"
-              className="input input-bordered"
+              placeholder="Email"
+              className="input text-black"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -74,8 +76,8 @@ const Login = () => {
             <input
               name="password"
               type="password"
-              placeholder="password"
-              className="input input-bordered"
+              placeholder="Password"
+              className="input text-black"
               required
             />
             <label className="label">

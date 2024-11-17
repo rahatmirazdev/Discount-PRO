@@ -65,7 +65,7 @@ const Navbar = () => {
                 alt={user.displayName}
                 className="h-8 w-8 rounded-full mr-2 hidden md:inline"
               />
-              <span className="mr-4 hidden md:inline">{user?.email}</span>
+              
               <button
                 className="btn rounded-none bg-[#1B263B] text-white border-none"
                 onClick={signOutUser}

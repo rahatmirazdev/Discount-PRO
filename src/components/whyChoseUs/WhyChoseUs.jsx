@@ -1,10 +1,17 @@
 import { FaCheck } from "react-icons/fa";
 import thinkingImage from "../../assets/thinking1.jpg";
-
+import bg from "../../assets/bg.svg";
 
 const WhyChooseUs = () => {
   return (
-    <div className="bg-[#0D1B2A] my-24 flex flex-col md:flex-row justify-between items-center max-w-[1440px] mx-auto px-7 py-8 rounded-lg shadow-lg">
+    <div
+      className="my-24 flex flex-col md:flex-row justify-between items-center max-w-[1440px] mx-auto px-7 py-8 rounded-lg shadow-lg"
+      style={{
+        backgroundImage: `url(${bg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="w-full md:w-1/2 mb-8 md:mb-0 pr-0 md:px-8">
         <h2 className="text-4xl font-bold text-white mb-4">Why Choose Us</h2>
         <p className="text-lg text-white mb-4 opacity-65">
