@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import bannerImgOne from "../../assets/banner/1.png";
 import bannerImgTwo from "../../assets/banner/2.png";
 import bannerImgThree from "../../assets/banner/3.png";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   const images = [bannerImgOne, bannerImgTwo, bannerImgThree];
@@ -27,12 +28,16 @@ const Banner = () => {
             You can find the best deals on your favorite brands here. We have
             the best deals on the internet. Dont miss out!
           </p>
-          <button className="btn rounded-none bg-[#1B263B] text-white hover:bg-[#060f1b] border-none mt-4">
+          <Link to="/brands" className="btn rounded-none bg-[#1B263B] text-white hover:bg-[#060f1b] border-none mt-4">
             Grabe the deal
-          </button>
+          </Link>
         </div>
         <div className="w-full md:w-1/2 mb-4 md:mb-0">
-          <img src={images[currentImageIndex]} alt="" className="w-full h-auto" />
+          <img
+            src={images[currentImageIndex]}
+            alt=""
+            className="w-full h-auto"
+          />
         </div>
       </div>
     </div>

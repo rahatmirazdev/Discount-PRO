@@ -4,10 +4,11 @@ import { AuthContext } from "../providers/AuthProvider";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { TailSpin } from "react-loader-spinner";
 
 const Coupon = () => {
   const { id } = useParams();
-  const { user } = useContext(AuthContext);
+  const { user, loading } = useContext(AuthContext);
   const navigate = useNavigate();
   const [brand, setBrand] = useState(null);
 
@@ -19,6 +20,21 @@ const Coupon = () => {
         setBrand(brandData);
       });
   }, [id]);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <TailSpin
+          height="80"
+          width="80"
+          color="#4fa94d"
+          ariaLabel="tail-spin-loading"
+          radius="1"
+          visible={true}
+        />
+      </div>
+    );
+  }
 
   if (!user) {
     navigate("/login");
@@ -56,8 +72,12 @@ const Coupon = () => {
               Coupon Code: {coupon.coupon_code}
             </h2>
             <p className="text-gray-600 mb-2">{coupon.description}</p>
-            <p className="text-gray-600 mb-2"><span className="font-bold">Expires:</span> {coupon.expiry_date}</p>
-            <p className="text-gray-600 mb-2"><span className="font-bold">Condition:</span> {coupon.condition}</p>
+            <p className="text-gray-600 mb-2">
+              <span className="font-bold">Expires:</span> {coupon.expiry_date}
+            </p>
+            <p className="text-gray-600 mb-2">
+              <span className="font-bold">Condition:</span> {coupon.condition}
+            </p>
             <div className="flex justify-between items-center mt-4">
               <CopyToClipboard
                 text={coupon.coupon_code}

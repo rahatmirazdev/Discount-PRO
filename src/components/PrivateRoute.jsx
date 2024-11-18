@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import PropTypes from "prop-types";
 import { TailSpin } from "react-loader-spinner";
+
 const PrivateRoute = ({ children }) => {
   const { user, loading } = useContext(AuthContext);
 

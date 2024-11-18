@@ -27,7 +27,7 @@ const Navbar = () => {
     ];
 
     if (user) {
-      items.push({ to: "/my-profile", label: "My Profile" },);
+      items.push({ to: "/my-profile", label: "My Profile" });
     }
 
     return items.map((item) => (
@@ -65,7 +65,6 @@ const Navbar = () => {
                 alt={user.displayName}
                 className="h-8 w-8 rounded-full mr-2 hidden md:inline"
               />
-
               <button
                 className="btn rounded-none bg-[#1B263B] text-white border-none"
                 onClick={signOutUser}
