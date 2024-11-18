@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
-import { FaStar } from "react-icons/fa";
+import SingleBrand from "./SingleBrand";
 import bg from "../../assets/stacked-waves-haikei.svg";
 
 const Brands = () => {
@@ -44,38 +44,7 @@ const Brands = () => {
       />
       <div className="grid grid-cols-1 gap-8">
         {filteredBrands.map((brand) => (
-          <div
-            key={brand._id}
-            className="bg-[#e6e6e6] shadow-sm rounded-tr-3xl rounded-bl-3xl p-8"
-            style={{
-              backgroundImage: `url(${bg})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            <div className="mb-4">
-              <img src={brand.brand_logo} alt={brand.brand_name} className="h-16 w-auto m-4 ml-0" />
-              <div>
-                <h2 className="text-2xl font-bold text-gray-800">{brand.brand_name}</h2>
-                <div className="flex items-center text-yellow-500">
-                  <FaStar className="mr-1" />
-                  <span>{brand.rating}</span>
-                </div>
-              </div>
-            </div>
-            <p className="text-gray-600 mb-4">{brand.description}</p>
-            <div className="flex justify-between items-center">
-              <button
-                className="btn rounded-none bg-[#1B263B] text-white hover:bg-[#060f1b] border-none"
-                onClick={() => handleViewCoupons(brand._id)}
-              >
-                View Coupons
-              </button>
-              {brand.isSaleOn && (
-                <span className="text-red-500 font-extrabold mr-4 animate-bounce">Sale is on!</span>
-              )}
-            </div>
-          </div>
+          <SingleBrand key={brand._id} brand={{ ...brand, bg }} handleViewCoupons={handleViewCoupons} />
         ))}
       </div>
     </div>

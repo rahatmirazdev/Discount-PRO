@@ -24,7 +24,7 @@ const Banner = () => {
             Grabe the <span className="text-[#0e52d1]">best deals</span> <br />
             right now!
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 max-w-[600px]">
             You can find the best deals on your favorite brands here. We have
             the best deals on the internet. Dont miss out!
           </p>

@@ -6,7 +6,7 @@ import TopBrands from "../components/topBrands/TopBrands";
 
 const Home = () => {
   return (
-    <div className="max-w-[1440px] mx-auto px-2">
+    <div className="max-w-[1440px] mx-auto px-2 overflow-x-hidden">
       <Banner />
       <TopBrands />
       <BrandsOnSell />

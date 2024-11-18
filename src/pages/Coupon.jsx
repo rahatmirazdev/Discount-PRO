@@ -88,8 +88,13 @@ const Coupon = () => {
                 </button>
               </CopyToClipboard>
               <button
-                className="btn rounded-none bg-[#1B263B] text-white hover:bg-[#060f1b] border-none"
-                onClick={() => window.open(brand.shop_link, "_blank")}
+                className={`btn rounded-none bg-[#0d2455] text-white hover:bg-[#060f1b] border-none ${
+                  !brand.isSaleOn ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+                onClick={() =>
+                  brand.isSaleOn && window.open(brand.shop_link, "_blank")
+                }
+                disabled={!brand.isSaleOn}
               >
                 Use Now
               </button>

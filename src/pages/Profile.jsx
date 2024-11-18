@@ -31,13 +31,13 @@ const Profile = () => {
       }}
     >
       <div className="w-full bg-cover bg-center h-64">
-        <div className="flex justify-center items-center h-full bg-black bg-opacity-50">
+        <div className="px-2 flex justify-center items-center h-full bg-black bg-opacity-50">
           <h1 className="text-4xl font-bold text-white">
             Welcome, {user.displayName}!
           </h1>
         </div>
       </div>
-      <div className="bg-white shadow-md rounded-lg p-8 mt-8 w-full max-w-md text-center">
+      <div className=" bg-white shadow-md rounded-lg p-8 mt-8 w-full max-w-md text-center">
         <img
           src={user.photoURL}
           alt={user.displayName}
