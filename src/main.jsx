@@ -10,7 +10,8 @@ import NotFound from "./components/error/NotFound";
 import AuthProvider from "./providers/AuthProvider";
 import Brands from "./components/brands/Brands";
 import PrivateRoute from "./components/PrivateRoute";
-import Brand from "./components/brand/Brand";
+import Coupon from "./pages/Coupon";
+import Profile from "./pages/Profile";
 
 const router = createBrowserRouter([
   {
@@ -38,10 +39,18 @@ const router = createBrowserRouter([
         element: <Brands />,
       },
       {
-        path: "/brands/:brandId",
+        path: "/brand/:id",
         element: (
           <PrivateRoute>
-            <Brand />
+            <Coupon />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/my-profile",
+        element: (
+          <PrivateRoute>
+            <Profile />
           </PrivateRoute>
         ),
       },
