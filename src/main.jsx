@@ -10,8 +10,10 @@ import NotFound from "./components/error/NotFound";
 import AuthProvider from "./providers/AuthProvider";
 import Brands from "./components/brands/Brands";
 import PrivateRoute from "./components/PrivateRoute";
+import PublicRoute from "./components/PublicRoute";
 import Coupon from "./pages/Coupon";
 import Profile from "./pages/Profile";
+import { ToastContainer } from "react-toastify";
 
 const router = createBrowserRouter([
   {
@@ -28,11 +30,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login />,
+        element: (
+          <PublicRoute>
+            <Login />
+          </PublicRoute>
+        ),
       },
       {
         path: "/register",
-        element: <Register />,
+        element: (
+          <PublicRoute>
+            <Register />
+          </PublicRoute>
+        ),
       },
       {
         path: "/brands",
@@ -62,6 +72,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <AuthProvider>
       <RouterProvider router={router} />
+      <ToastContainer />
     </AuthProvider>
   </StrictMode>
 );

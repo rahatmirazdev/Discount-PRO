@@ -53,11 +53,11 @@ const Coupon = () => {
             className="bg-white shadow-md rounded-lg p-4"
           >
             <h2 className="text-xl font-bold text-gray-800 mb-2">
-              {coupon.coupon_code}
+              Coupon Code: {coupon.coupon_code}
             </h2>
             <p className="text-gray-600 mb-2">{coupon.description}</p>
-            <p className="text-gray-600 mb-2">Expires: {coupon.expiry_date}</p>
-            <p className="text-gray-600 mb-2">Condition: {coupon.condition}</p>
+            <p className="text-gray-600 mb-2"><span className="font-bold">Expires:</span> {coupon.expiry_date}</p>
+            <p className="text-gray-600 mb-2"><span className="font-bold">Condition:</span> {coupon.condition}</p>
             <div className="flex justify-between items-center mt-4">
               <CopyToClipboard
                 text={coupon.coupon_code}
