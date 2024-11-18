@@ -14,6 +14,7 @@ import PublicRoute from "./components/PublicRoute";
 import Coupon from "./pages/Coupon";
 import Profile from "./pages/Profile";
 import { ToastContainer } from "react-toastify";
+import AboutDev from "./pages/AboutDev";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/brands",
         element: <Brands />,
+      },
+      {
+        path: "/about-dev",
+        element: <AboutDev />,
       },
       {
         path: "/brand/:id",
