@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import myImage from "../assets/rahat.png";
-import bg from "../assets/stacked-waves-haikei.svg";
+import bg from "../assets/stacked-waves-haikei.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -40,14 +40,14 @@ const AboutDev = () => {
           alt="Rahat Ahmed Miraz"
           className="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-indigo-600/100 p-1"
         />
-        <h2 className="text-2xl font-bold text-center mb-2 text-black">
+        <h2 className="text-2xl font-bold text-center mb-2">
           Rahat Ahmed Miraz
         </h2>
         <p className="text-center text-black mb-4">rahatmiraz.dev@gmail.com</p>
         <hr className="border-gray-500 mb-4" />
         <div className="flex flex-col space-y-2">
           <button
-            className={`btn hover:bg-black hover:text-white text-black ${
+            className={`btn hover:bg-black hover:text-white ${
               activeCategory === "socialLinks"
                 ? "bg-[#1B263B] text-white"
                 : "bg-transparent"
@@ -57,7 +57,7 @@ const AboutDev = () => {
             Programming Hero
           </button>
           <button
-            className={`btn hover:bg-black hover:text-white text-black ${
+            className={`btn hover:bg-black hover:text-white ${
               activeCategory === "education"
                 ? "bg-[#1B263B] text-white"
                 : "bg-transparent"
@@ -67,7 +67,7 @@ const AboutDev = () => {
             Education
           </button>
           <button
-            className={`btn hover:bg-black hover:text-white text-black ${
+            className={`btn hover:bg-black hover:text-white ${
               activeCategory === "collegeInfo"
                 ? "bg-[#1B263B] text-white"
                 : "bg-transparent"

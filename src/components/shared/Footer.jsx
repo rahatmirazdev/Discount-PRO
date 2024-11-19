@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import bg from "../../assets/bg.svg";
+import bg from "../../assets/bg.png";
 
 const Footer = () => {
   return (

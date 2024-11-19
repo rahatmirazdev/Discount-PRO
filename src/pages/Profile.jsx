@@ -2,7 +2,7 @@ import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import { TailSpin } from "react-loader-spinner";
-import bg from "../assets/bg.svg";
+import bg from "../assets/bg.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

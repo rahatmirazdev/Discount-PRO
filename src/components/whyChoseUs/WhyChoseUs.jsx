@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { FaCheck } from "react-icons/fa";
 import thinkingImage from "../../assets/thinking1.jpg";
-import bg from "../../assets/bg.svg";
+import bg from "../../assets/bg.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

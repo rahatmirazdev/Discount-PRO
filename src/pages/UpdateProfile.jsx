@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
-import bg from "../assets/bg.svg";
+import bg from "../assets/bg.png";
 
 const UpdateProfile = () => {
   const { user } = useContext(AuthContext);

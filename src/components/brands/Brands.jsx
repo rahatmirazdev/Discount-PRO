@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import SingleBrand from "./SingleBrand";
-import bg from "../../assets/stacked-waves-haikei.svg";
+import bg from "../../assets/stacked-waves-haikei.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
