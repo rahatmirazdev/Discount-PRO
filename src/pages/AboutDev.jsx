@@ -35,7 +35,6 @@ const AboutDev = () => {
         }}
         data-aos="fade-right"
       >
-        
         <img
           src={myImage}
           alt="Rahat Ahmed Miraz"
@@ -79,7 +78,10 @@ const AboutDev = () => {
           </button>
         </div>
       </div>
-      <div className="w-full md:w-3/4 p-4 bg-white rounded-lg shadow-md" data-aos="fade-left">
+      <div
+        className="w-full md:w-3/4 p-4 bg-white rounded-lg shadow-md"
+        data-aos="fade-left"
+      >
         {renderContent()}
       </div>
     </div>
@@ -90,8 +92,7 @@ const Education = () => (
   <div>
     <h2 className="text-2xl font-bold mb-4 text-[#1B263B]">Education</h2>
     <p className="text-gray-700 pl-7">
-      Styding Diploma in Electronics Engineering at{" "}
-      <b>Sylhet Polytechnic Institute</b>.
+      Styding Diploma in Electronics Engineering at <b>Sylhet Polytechnic Institute</b>.
     </p>
   </div>
 );
@@ -112,31 +113,15 @@ const CollegeInfo = () => (
     <h2 className="text-2xl font-bold mb-4 text-[#1B263B]">
       Already Acquired Skills Below
     </h2>
-    <ul className="pl-9 list-disc text-gray-700 space-y-2">
-      <li className="hover:text-[#1B263B] transition-colors duration-300">
-        HTML
-      </li>
-      <li className="hover:text-[#1B263B] transition-colors duration-300">
-        CSS
-      </li>
-      <li className="hover:text-[#1B263B] transition-colors duration-300">
-        JavaScript
-      </li>
-      <li className="hover:text-[#1B263B] transition-colors duration-300">
-        React
-      </li>
-      <li className="hover:text-[#1B263B] transition-colors duration-300">
-        Git
-      </li>
-      <li className="hover:text-[#1B263B] transition-colors duration-300">
-        GitHub
-      </li>
-      <li className="hover:text-[#1B263B] transition-colors duration-300">
-        Netlify
-      </li>
-      <li className="hover:text-[#1B263B] transition-colors duration-300">
-        Stripe
-      </li>
+    <ul className="pl-9 list-disc text-gray-700 space-y-2 hover:text-[#1B263B] transition-colors duration-300">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Git</li>
+      <li>GitHub</li>
+      <li>Netlify</li>
+      <li>Stripe</li>
     </ul>
     <p className="text-gray-700 mt-4">
       And also explored some other technologies like Bootstrap, Tailwind CSS,
