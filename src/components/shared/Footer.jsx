@@ -13,7 +13,7 @@ const Footer = () => {
     >
       <div className="max-w-[1440px] mx-auto px-4 flex justify-between items-center">
         <div>
-          <p className="text-sm">&copy; 2023 Your Name. All rights reserved.</p>
+          <p className="text-sm">&copy; 2024 Rahat Ahmed Miraz. All rights reserved.</p>
         </div>
         <div className="flex space-x-4">
           <a href="https://github.com/rahatmirazdev" target="_blank">

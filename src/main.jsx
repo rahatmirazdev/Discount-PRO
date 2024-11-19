@@ -15,6 +15,7 @@ import Coupon from "./pages/Coupon";
 import Profile from "./pages/Profile";
 import { ToastContainer } from "react-toastify";
 import AboutDev from "./pages/AboutDev";
+import ForgotPassword from "./pages/ForgotPassword";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,14 @@ const router = createBrowserRouter([
         element: (
           <PublicRoute>
             <Register />
+          </PublicRoute>
+        ),
+      },
+      {
+        path: "/forgot-password",
+        element: (
+          <PublicRoute>
+            <ForgotPassword />
           </PublicRoute>
         ),
       },

@@ -1,8 +1,6 @@
 import { useContext, useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
-import { sendPasswordResetEmail } from "firebase/auth";
-import { auth } from "../firebase/firebase.init";
 
 const Login = () => {
   const [error, setError] = useState("");
@@ -19,8 +17,8 @@ const Login = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
-        setError(""); // Clear any previous errors
-        navigate("/"); // Redirect to home page
+        setError("");
+        navigate("/");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -31,21 +29,7 @@ const Login = () => {
   };
 
   const handlePasswordReset = () => {
-    if (!email) {
-      setError("Please enter your email address to reset your password.");
-      return;
-    }
-
-    sendPasswordResetEmail(auth, email)
-      .then(() => {
-        setError("Password reset email sent. Please check your inbox.");
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
-        setError(errorMessage);
-      });
+    navigate("/forgot-password", { state: { email } });
   };
 
   return (
@@ -81,13 +65,13 @@ const Login = () => {
               required
             />
             <label className="label">
-              <a
-                href="#"
-                className="label-text-alt link link-hover"
+              <NavLink
+                to="#"
+                className="text-white"
                 onClick={handlePasswordReset}
               >
                 Forgot password?
-              </a>
+              </NavLink>
             </label>
           </div>
           {error && <p className="text-red-500">{error}</p>}
