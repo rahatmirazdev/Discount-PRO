@@ -1,10 +1,12 @@
 import { useContext, useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
   const [error, setError] = useState("");
   const [email, setEmail] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false);
   const { signIn, signInWithGoogle } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -53,26 +55,30 @@ const Login = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
             <input
               name="password"
-              type="password"
+              type={passwordVisible ? "text" : "password"}
               placeholder="Password"
               className="input text-black"
               required
             />
-            <label className="label">
-              <NavLink
-                to="#"
-                className="text-white"
-                onClick={handlePasswordReset}
-              >
-                Forgot password?
-              </NavLink>
-            </label>
+            <span
+              className="absolute right-3 top-[52px] cursor-pointer text-black"
+              onClick={() => setPasswordVisible(!passwordVisible)}
+            >
+              {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+            </span>
+            <NavLink
+              to="/forgot-password"
+              className="text-white mt-2"
+              onClick={handlePasswordReset}
+            >
+              Forgot password?
+            </NavLink>
           </div>
           {error && <p className="text-red-500">{error}</p>}
           <div className="form-control mt-6">

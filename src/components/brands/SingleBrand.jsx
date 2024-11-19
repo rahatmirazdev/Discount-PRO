@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { FaStar } from "react-icons/fa";
 
-const SingleBrand = ({ brand, handleViewCoupons }) => {
+const SingleBrand = ({ brand, handleViewCoupons, aosAnimation }) => {
   return (
     <div
       className="bg-[#e6e6e6] shadow-sm rounded-tr-3xl rounded-bl-3xl p-8"
@@ -10,6 +10,7 @@ const SingleBrand = ({ brand, handleViewCoupons }) => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
+      data-aos={aosAnimation}
     >
       <div className="mb-4">
         <img
@@ -44,6 +45,7 @@ const SingleBrand = ({ brand, handleViewCoupons }) => {
     </div>
   );
 };
+
 SingleBrand.propTypes = {
   brand: PropTypes.shape({
     bg: PropTypes.string,
@@ -55,6 +57,7 @@ SingleBrand.propTypes = {
     isSaleOn: PropTypes.bool,
   }).isRequired,
   handleViewCoupons: PropTypes.func.isRequired,
+  aosAnimation: PropTypes.string.isRequired,
 };
 
 export default SingleBrand;

@@ -3,12 +3,15 @@ import bannerImgOne from "../../assets/banner/1.png";
 import bannerImgTwo from "../../assets/banner/2.png";
 import bannerImgThree from "../../assets/banner/3.png";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Banner = () => {
   const images = [bannerImgOne, bannerImgTwo, bannerImgThree];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
+    AOS.init({ duration: 1000 });
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 4000);
@@ -19,7 +22,7 @@ const Banner = () => {
   return (
     <div className="max-w-[1440px] mx-auto px-2 overflow-hidden my-24">
       <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-4 md:gap-9">
-        <div className="w-full md:w-1/2 mt-4 md:mt-0">
+        <div className="w-full md:w-1/2 mt-4 md:mt-0" data-aos="fade-right">
           <h1 className="text-5xl font-bold text-gray-800 mb-4">
             Grabe the <span className="text-[#0e52d1]">best deals</span> <br />
             right now!
@@ -32,7 +35,7 @@ const Banner = () => {
             Grabe the deal
           </Link>
         </div>
-        <div className="w-full md:w-1/2 mb-4 md:mb-0">
+        <div className="w-full md:w-1/2 mb-4 md:mb-0" data-aos="fade-left">
           <img
             src={images[currentImageIndex]}
             alt=""

@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import SingleBrand from "./SingleBrand";
 import bg from "../../assets/stacked-waves-haikei.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Brands = () => {
   const [brands, setBrands] = useState([]);
@@ -11,6 +13,7 @@ const Brands = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    AOS.init({ duration: 1000 });
     fetch("/coupons.json")
       .then((response) => response.json())
       .then((data) => setBrands(data));
@@ -43,8 +46,13 @@ const Brands = () => {
         className="w-full p-2 mb-8 border border-gray-300 rounded"
       />
       <div className="grid grid-cols-1 gap-8">
-        {filteredBrands.map((brand) => (
-          <SingleBrand key={brand._id} brand={{ ...brand, bg }} handleViewCoupons={handleViewCoupons} />
+        {filteredBrands.map((brand, index) => (
+          <SingleBrand
+            key={brand._id}
+            brand={{ ...brand, bg }}
+            handleViewCoupons={handleViewCoupons}
+            aosAnimation={index % 2 === 0 ? "fade-up" : "fade-down"}
+          />
         ))}
       </div>
     </div>

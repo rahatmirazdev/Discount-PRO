@@ -4,11 +4,14 @@ import { AuthContext } from "../providers/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { validatePassword } from "../utils/validation";
+import { updateProfile } from "firebase/auth";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
   const { register, signInWithGoogle } = useContext(AuthContext);
   const navigate = useNavigate();
   const [passwordError, setPasswordError] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,7 +30,7 @@ const Register = () => {
     register(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        user.updateProfile({
+        updateProfile(user, {
           displayName: name,
           photoURL: photoURL,
         }).then(() => {
@@ -84,17 +87,23 @@ const Register = () => {
               required
             />
           </div>
-          <div className="form-control">
+          <div className="form-control relative">
             <label className="label">
               <span className="label-text">Password</span>
             </label>
             <input
               name="password"
-              type="password"
+              type={passwordVisible ? "text" : "password"}
               placeholder="Password"
               className="input text-black"
               required
             />
+            <span
+              className="absolute right-3 top-[52px] cursor-pointer text-black"
+              onClick={() => setPasswordVisible(!passwordVisible)}
+            >
+              {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+            </span>
             {passwordError && <p className="text-red-500">{passwordError}</p>}
           </div>
           <div className="form-control mt-6">

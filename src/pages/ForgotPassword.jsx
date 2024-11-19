@@ -1,6 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import { NavLink } from "react-router-dom";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -49,6 +50,11 @@ const ForgotPassword = () => {
             <button className="btn btn-primary" type="submit">
               Reset Password
             </button>
+          </div>
+          <div className=" mt-2">
+            <NavLink to="/login" className="text-white">
+              Back to Login
+            </NavLink>
           </div>
         </form>
       </div>

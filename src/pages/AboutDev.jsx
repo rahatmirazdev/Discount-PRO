@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import myImage from "../assets/rahat.png";
 import bg from "../assets/stacked-waves-haikei.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AboutDev = () => {
   const [activeCategory, setActiveCategory] = useState("education");
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   const renderContent = () => {
     switch (activeCategory) {
@@ -27,6 +33,7 @@ const AboutDev = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
+        data-aos="fade-right"
       >
         <img
           src={myImage}
@@ -71,7 +78,7 @@ const AboutDev = () => {
           </button>
         </div>
       </div>
-      <div className="w-full md:w-3/4 p-4 bg-white rounded-lg shadow-md">
+      <div className="w-full md:w-3/4 p-4 bg-white rounded-lg shadow-md" data-aos="fade-left">
         {renderContent()}
       </div>
     </div>

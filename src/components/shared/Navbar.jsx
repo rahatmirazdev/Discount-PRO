@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Snowfall from "react-snowfall";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,7 +46,7 @@ const Navbar = () => {
 
   return (
     <>
-       <Snowfall snowflakeCount={100} radius={[0.5,0.7]}/>
+      <Snowfall snowflakeCount={100} radius={[0.5, 0.7]} />
       <div
         className={`sticky top-0 transition-all duration-300 z-50 ${
           isScrolled ? "backdrop-blur-md bg-opacity-80" : ""
@@ -140,6 +141,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
+      <ScrollToTopButton />
     </>
   );
 };
