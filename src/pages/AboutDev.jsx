@@ -35,10 +35,11 @@ const AboutDev = () => {
         }}
         data-aos="fade-right"
       >
+        
         <img
           src={myImage}
           alt="Rahat Ahmed Miraz"
-          className="w-32 h-32 rounded-full mx-auto mb-4"
+          className="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-indigo-600/100 p-1"
         />
         <h2 className="text-2xl font-bold text-center mb-2 text-black">
           Rahat Ahmed Miraz
