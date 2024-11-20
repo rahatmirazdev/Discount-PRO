@@ -14,7 +14,6 @@ const SignInWithGithub = () => {
         setUserData(result.user);
       })
       .catch((error) => {
-        console.log(error);
         setError(error.message);
       });
   };

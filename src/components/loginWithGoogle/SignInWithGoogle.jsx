@@ -12,11 +12,9 @@ const SignInWithGoogle = () => {
     e.preventDefault();
     signInWithPopup(auth, provider)
       .then((result) => {
-        console.log(result);
         setUserData(result.user);
       })
       .catch((error) => {
-        console.log(error);
         setError(error.message);
       });
   };
