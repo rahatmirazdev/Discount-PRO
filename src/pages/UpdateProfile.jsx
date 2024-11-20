@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import bg from "../assets/bg.png";
+import { toast, ToastContainer } from "react-toastify";
 
 const UpdateProfile = () => {
   const { user } = useContext(AuthContext);
@@ -17,7 +18,7 @@ const UpdateProfile = () => {
         navigate("/my-profile");
       })
       .catch((error) => {
-        console.error(error);
+        toast.error(error.message);
       });
   };
 
@@ -67,6 +68,7 @@ const UpdateProfile = () => {
             </button>
           </div>
         </form>
+        <ToastContainer />
       </div>
     </div>
   );

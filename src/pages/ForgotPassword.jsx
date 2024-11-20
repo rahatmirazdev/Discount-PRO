@@ -1,7 +1,8 @@
 import { useContext, useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
-import { NavLink } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
@@ -23,7 +24,7 @@ const ForgotPassword = () => {
         });
       })
       .catch((error) => {
-        console.error(error);
+        toast.error(error.message);
       });
   };
 
@@ -51,12 +52,13 @@ const ForgotPassword = () => {
               Reset Password
             </button>
           </div>
-          <div className=" mt-2">
+          <div className="mt-2">
             <NavLink to="/login" className="text-white">
               Back to Login
             </NavLink>
           </div>
         </form>
+        <ToastContainer />
       </div>
     </div>
   );
