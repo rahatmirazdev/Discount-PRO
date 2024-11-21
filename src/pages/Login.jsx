@@ -16,12 +16,16 @@ const Login = () => {
     const password = e.target.password.value;
 
     signIn(email, password)
-      .then(() => {
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
         setError("");
         navigate("/");
       })
       .catch((error) => {
+        const errorCode = error.code;
         const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
         setError(errorMessage);
       });
   };
@@ -69,7 +73,7 @@ const Login = () => {
               {passwordVisible ? <FaEyeSlash /> : <FaEye />}
             </span>
             <NavLink
-              to="/forgot-password"
+              to="#"
               className="text-white mt-2"
               onClick={handlePasswordReset}
             >

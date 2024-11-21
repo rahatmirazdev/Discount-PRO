@@ -3,7 +3,7 @@
 **Discount PRO** is a simple yet powerful web application designed to help users find and use discount coupons for popular e-commerce stores worldwide. With Discount PRO, users can save time and money by accessing all available coupons in one place.
 
 
-## 🛍️ Overview
+## 🛍️ Purpose
 
 E-commerce stores often provide various vouchers and coupon codes for discounts. **Discount PRO** shows all the available coupons across multiple stores, making it easier for users to discover the best deals effortlessly.
 
@@ -16,6 +16,28 @@ E-commerce stores often provide various vouchers and coupon codes for discounts.
   - Details include discount amount, expiry date, and applicable product categories.
 - **Copy Coupon Codes:**
   - Copy coupon codes with a single click for easy application during checkout.
+
+
+## 📦 NPM Packages Used
+
+- `react`
+- `firebase`
+- `tailwindcss`
+- `react-icons`
+- `react-toastify`
+- `react-copy-to-clipboard`
+- `react-loader-spinner`
+- `react-router-dom`
+- `react-fast-marquee`
+- `aos`
+- `daisyui`
+- `eslint`
+- `eslint-plugin-react`
+- `eslint-plugin-react-hooks`
+- `eslint-plugin-react-refresh`
+- `postcss`
+- `autoprefixer`
+- `vite`
 
 
 ## 🛠️ Technology Stack
@@ -52,4 +74,4 @@ E-commerce stores often provide various vouchers and coupon codes for discounts.
 ### Discount PRO ###
 **Github repository:** [https://github.com/programming-hero-web-course1/b10-a9-authentication-rahatmirazdev](https://github.com/programming-hero-web-course1/b10-a9-authentication-rahatmirazdev)
 
-**Live site:** [https://test-5c886.firebaseapp.com/](https://test-5c886.firebaseapp.com/)
+**Live URL:** [https://test-5c886.firebaseapp.com/](https://test-5c886.firebaseapp.com/)
