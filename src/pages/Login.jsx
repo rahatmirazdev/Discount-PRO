@@ -16,16 +16,12 @@ const Login = () => {
     const password = e.target.password.value;
 
     signIn(email, password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        console.log(user);
+      .then(() => {
         setError("");
         navigate("/");
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
         setError(errorMessage);
       });
   };
