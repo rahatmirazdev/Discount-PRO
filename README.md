@@ -27,18 +27,8 @@ E-commerce stores often provide various vouchers and coupon codes for discounts.
 - `react-toastify`
 - `react-copy-to-clipboard`
 - `react-loader-spinner`
-- `react-router-dom`
 - `react-fast-marquee`
-- `aos`
 - `daisyui`
-- `eslint`
-- `eslint-plugin-react`
-- `eslint-plugin-react-hooks`
-- `eslint-plugin-react-refresh`
-- `postcss`
-- `autoprefixer`
-- `vite`
-
 
 ## 🛠️ Technology Stack
 
